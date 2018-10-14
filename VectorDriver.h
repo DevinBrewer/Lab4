@@ -74,5 +74,24 @@ void print_even(vector<short> &data) {
     cout << ">";
   }
 }
-// TODO: implement is_present
+
+// Check if a "value" is present in the vector
+bool is_present(const vector<short> &data, short value) {
+  // Create the iterator
+  std::vector<short>::const_iterator iter = data.begin();
+
+  // Search for "value"
+  while (iter != data.end()) {
+    // Check for the value
+    if (*iter == value) {
+      return true;
+    }
+
+    // Increment the iterator
+    iter++;
+  }
+
+  // "value" wasnt found
+  return false;
+}
 // TODO: implement std::sort function

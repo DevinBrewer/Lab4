@@ -27,8 +27,9 @@ int main() {
   cout << "print even: ";
   print(a);
   cout << endl;
-  print_even(a);
-  cout << endl;
+
+  cout << is_present(a, a.at(2)) << endl;
+  cout << is_present(a, 12) << endl;
 
   return 0;
 }
