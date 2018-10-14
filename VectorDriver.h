@@ -57,6 +57,8 @@ short compute_sum(const vector<short> &data) {
 void add_numbers(vector<short> &data) {
   // Set the random seed
   srand((unsigned)time(0));
+
+  // Generate the numbers
   for (int i=0; i < 10; i++) {
     data.push_back((short)rand());
   }
@@ -68,6 +70,7 @@ void print_even(vector<short> &data) {
     cout << "<empty>";
   } else {
     cout << "<" << data.at(0);
+    // Start parsing through every other number and print it out
     for (ulong i = 2; i < data.size(); i+=2) {
       cout << ", " << data.at(i);
     }
@@ -94,4 +97,3 @@ bool is_present(const vector<short> &data, short value) {
   // "value" wasnt found
   return false;
 }
-// TODO: implement std::sort function
