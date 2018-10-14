@@ -13,6 +13,8 @@ typedef unsigned long ulong;
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>  // Random
+#include <ctime>  // Time for rand()
 
 using std::cout;
 using std::endl;
@@ -52,6 +54,15 @@ short compute_sum(const vector<short> &data) {
 }
 
 // TODO: implement add_numbers
+// Add 10 random numbers to the end of the vector
+void add_numbers(vector<short> &data) {
+  // Set the random seed
+  srand((unsigned)time(0));
+  for (int i=0; i < 10; i++) {
+    data.push_back((short)rand());
+  }
+}
+
 // TODO: implement print_even
 // TODO: implement is_present
 // TODO: implement std::sort function
