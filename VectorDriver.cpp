@@ -1,3 +1,5 @@
+#include <algorithm>  // Sort
+
 #include "VectorDriver.h"
 
 int main() {
@@ -17,19 +19,23 @@ int main() {
   // cout << "sum of vector's elements: " << compute_sum(sample_vector) << endl;
   // cout << endl << "   ..::  E N D   S A M P L E  C O D E  ::.." << endl;
 
+
   vector<short> a;
-  cout << "new vector: ";
+  a.push_back(213);
+  a.push_back(654);
+  a.push_back(123);
+  a.push_back(678);
+  a.push_back(124);
+
+  cout << "unsorted: ";
   print(a);
   cout << endl;
 
-  add_numbers(a);
+  std::sort(a.begin(), a.end());
 
-  cout << "print even: ";
+  cout << "sorted: ";
   print(a);
   cout << endl;
-
-  cout << is_present(a, a.at(2)) << endl;
-  cout << is_present(a, 12) << endl;
 
   return 0;
 }
