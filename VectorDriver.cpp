@@ -23,12 +23,12 @@ int main() {
   cout << endl;
 
   add_numbers(a);
-  add_numbers(a);
 
-  cout << "add numbers: ";
+  cout << "print even: ";
   print(a);
   cout << endl;
+  print_even(a);
+  cout << endl;
 
-  system("pause");
   return 0;
 }

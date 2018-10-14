@@ -53,7 +53,6 @@ short compute_sum(const vector<short> &data) {
   return sum;
 }
 
-// TODO: implement add_numbers
 // Add 10 random numbers to the end of the vector
 void add_numbers(vector<short> &data) {
   // Set the random seed
@@ -63,6 +62,17 @@ void add_numbers(vector<short> &data) {
   }
 }
 
-// TODO: implement print_even
+// Print only the even numbers in the vector
+void print_even(vector<short> &data) {
+  if (data.empty()) {
+    cout << "<empty>";
+  } else {
+    cout << "<" << data.at(0);
+    for (ulong i = 2; i < data.size(); i+=2) {
+      cout << ", " << data.at(i);
+    }
+    cout << ">";
+  }
+}
 // TODO: implement is_present
 // TODO: implement std::sort function
